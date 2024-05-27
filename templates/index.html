@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Weather App</h1>
+        <form id="weatherForm" class="mt-4">
+            <div class="form-group">
+                <label for="city">Enter City Name</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter city name here">
+            </div>
+            <button type="submit" class="btn btn-primary">Get Weather</button>
+            
+        </form>
+        <button onclick="window.location = 'http://localhost:5000/dropsession' "type="submit" class="btn btn-primary">Log out</button>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <script defer> //Basic string manipulation
+        document.getElementById('weatherForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var city = document.getElementById('city').value; //Get the value of the input field
+            window.location.href = '/Weather/' + city;
+        });
+    </script>
+</body>
+</html>

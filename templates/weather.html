@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card mt-5">
+                        <div class="card-header">
+                            <h2 class="text-center">Weather Information</h2>
+                        </div>
+                        <div class="card-body">
+                            <b><h1 class="card-title text-center">{{weather.location}}</h1></b>
+                            <p class="card-text text-center">Current Weather: {{weather.kind}} {{emoji}}</p>
+                            <p class="card-text text-center">Temperature: {{weather.temperature}}</p>
+                            <p class="card-text text-center">Humidity: {{weather.humidity}}</p>
+                            <p class="card-text text-center">Wind Speed: {{weather.wind_speed}}</p>
+                            <p class="card-text text-center">Population: {{weather.local_population}} inhabitants</p>
+                            <h1 class="card-text text-center">Forecast:</h1>
+                            <div class="card-deck">
+                                {% for day in weather.daily_forecasts %}
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-center">{{ day.date }}</h6>
+                                            <p class="card-text text-center">Max Temp: {{ day.highest_temperature }}</p>
+                                            <p class="card-text text-center">Min Temp: {{ day.lowest_temperature }}</p>
+                                            <p class="card-text text-center">Avg Temp: {{ day.temperature }}</p>
+                                            <p class="card-text text-center">Sunrise: {{ day.sunrise }}</p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
