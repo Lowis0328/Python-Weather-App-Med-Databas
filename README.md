@@ -1,8 +1,8 @@
-### Introduktion
+# Introduktion
 
 Detta projekt är en sammansatt webapplikation som kombinerar funktionalitet från både webbserverprogrammering och allmän programmering. Applikationen är byggd med Flask och inkluderar användarhantering, väderinformation från en tredjeparts-API och grundläggande sessionhantering samt object orienterad programmering.
 
-### Funktionalitet
+# Funktionalitet
 
     Användarhantering: Registrering, inloggning och sessionhantering.
     Väderinformation: Hämtar väderinformation för en specifik stad med hjälp av python_weather.
