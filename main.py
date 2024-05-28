@@ -154,8 +154,8 @@ def dropsession():
     session.pop('user', None)
     return render_template('login.html')
 
-@app.route('/debug')
-def debug():
+@app.route('/users')
+def users():
     """
     Returnerar en lista över alla användare.
 
