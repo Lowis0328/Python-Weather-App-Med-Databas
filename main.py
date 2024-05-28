@@ -128,7 +128,7 @@ def WeatherInfo(city):
     """
     if g.user:
         weather = asyncio.run(väderklass.get_weather(city))
-        return render_template("weather.html", weather=weather, emoji=getEmoji(str(weather['kind'])))
+        return render_template("weather.html", weather=weather, emoji=getEmoji(str(weather.kind)))
 
     return redirect(url_for('login'))
 
