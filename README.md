@@ -33,7 +33,7 @@ När applikationen körs kan du navigera till http://127.0.0.1:5000/ i din webbl
     /main: Huvudsida för inloggade användare.
     /Weather/<city>: Visar väderinformation för en specifik stad.
     /dropsession: Loggar ut användaren och rensar sessionen.
-    /admin: Visar alla användare (endast för debug-syften).
+    /users: Visar alla användare (endast för debug-syften).
 
 
 # Filstruktur
